@@ -114,8 +114,7 @@ dependencies:
 
 # --- copy apk file to generic location ---
     - mkdir -p ./app/build/outputs/apk/
-    - cp -v ./target/android/output/toktok-debug-unaligned.apk ./app/build/outputs/apk/app-debug-unaligned.apk
-    - exit 1
+    - cp -v ./k9mail/build/outputs/apk/k9mail-debug.apk ./app/build/outputs/apk/app-debug-unaligned.apk
 # --- copy apk file to generic location ---
 
     - zip -d app/build/outputs/apk/app-debug-unaligned.apk META-INF/\*     # remove signature !!

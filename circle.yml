@@ -42,9 +42,6 @@ dependencies:
   cache_directories:
     - ~/.android
     - ~/.gradle
-    - ~/.ivy2
-    - ~/.m2
-    - ~/.sbt
   override:
     - echo "dummy"
   pre:
@@ -142,9 +139,6 @@ dependencies:
     - qrencode -o $CIRCLE_ARTIFACTS/QR_apk.png 'https://circle-artifacts.com/gh/'${CIRCLE_PROJECT_USERNAME}'/'${CIRCLE_PROJECT_REPONAME}'/'${CIRCLE_BUILD_NUM}'/artifacts/'${CIRCLE_NODE_INDEX}'/tmp/'`basename $CIRCLE_ARTIFACTS`'/'"${CIRCLE_PROJECT_REPONAME}_circleci_$CIRCLE_SHA1.apk" ; exit 0
 ##   qr code to go directly to the aritfacts (to scan with phone)
     - qrencode -o $CIRCLE_ARTIFACTS/QR_artifacts.png 'https://circleci.com/gh/'${CIRCLE_PROJECT_USERNAME}'/'${CIRCLE_PROJECT_REPONAME}'/'${CIRCLE_BUILD_NUM}'#artifacts' ; exit 0
-
-    - find ~/.ivy2 -type f -name "ivydata-*.properties" -delete ; exit 0
-    - find ~/.sbt/boot -name "sbt.*.lock" -delete ; exit 0
 
 test:
   pre:

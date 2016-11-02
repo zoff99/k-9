@@ -79,7 +79,8 @@ dependencies:
     - ~/__sdk_update__.sh build-tools-23.0.3
     - ~/__sdk_update__.sh build-tools-24.0.0
     - ~/__sdk_update__.sh build-tools-24.0.2
-    - ~/__sdk_update__.sh build-tools-24.0.3
+#    - ~/__sdk_update__.sh build-tools-24.0.3
+    - echo y | android update sdk --no-ui --all --filter build-tools-24.0.3 > /dev/null 2> /dev/null # license
     - ~/__sdk_update__.sh android-7
     - ~/__sdk_update__.sh android-14
     - ~/__sdk_update__.sh android-19
